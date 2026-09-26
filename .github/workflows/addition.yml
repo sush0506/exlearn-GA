@@ -10,4 +10,4 @@ jobs:
       - run: 
           result=$(expr 2 + 2)
           echo "2 + 2 = $result"
-          echo "hello its me"
+      
