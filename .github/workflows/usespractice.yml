@@ -1,0 +1,14 @@
+name: practice for uses command
+
+on : push
+
+jobs:
+  print:
+    runs-on : ubuntu-latest
+
+    steps:
+      - name: testing phase 
+        run: echo "Testing"
+        
+
+
