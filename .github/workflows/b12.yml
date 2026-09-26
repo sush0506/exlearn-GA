@@ -1,0 +1,11 @@
+name: My First workflfow
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo "Hello everyone"
+
