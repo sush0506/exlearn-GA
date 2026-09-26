@@ -1,0 +1,40 @@
+name: multi-jobs practice
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v5
+
+     - name: build the project
+       run: echo "Hello World"
+   
+  sleeps: 5 
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v5
+
+     - name: Run test
+       run: echo "Hello Test"
+  
+    sleeps: 5
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+     - name: deploy to production
+       run : echo "deployment test"
+
+    
+    
+
