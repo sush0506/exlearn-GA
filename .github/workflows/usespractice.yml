@@ -8,7 +8,10 @@ jobs:
 
     steps:
       - name: testing phase 
-        run: echo "Testing"
-        
+        uses: actions/checkout@v5
+
+      - name: checking code
+        run: ls -l
+
 
 
