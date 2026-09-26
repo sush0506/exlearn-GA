@@ -1,0 +1,12 @@
+name: My calculation workflow
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: 
+          result=$(expr 2 + 2)
+          echo "2 + 2 = $result"
