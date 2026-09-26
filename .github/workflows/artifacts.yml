@@ -1,0 +1,41 @@
+name: artifacts practice
+
+on: push
+
+jobs:
+  
+  build:
+
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v5
+
+     - name: Create a file
+       run: echo "Hello from build !">output.txt
+
+     - name: Upload artifacts
+       uses: actions/upload-artifact@v4
+
+       with:
+        name: build-output
+        path: output.txt
+
+  test:
+    
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+    
+     - name : Download artifacts
+       uses: actions/download-artifacts@v4
+
+       with:
+
+        name: build-output
+
+     - name: use artifacts
+       run: cat output.txt  

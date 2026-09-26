@@ -1,4 +1,4 @@
-name: multi-jobs practice
+name: multi-jobs practice sequential needs
 
 on: push
 
