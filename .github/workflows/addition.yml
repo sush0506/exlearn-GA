@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: 
+      - run: |
           result=$(expr 2 + 2)
           echo "2 + 2 = $result"
       
